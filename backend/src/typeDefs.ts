@@ -12,6 +12,7 @@ export const typeDefs = gql`
     id: Int!
     user: User
     userId: Int
+    body: String!
     like: [Like]
   }
 

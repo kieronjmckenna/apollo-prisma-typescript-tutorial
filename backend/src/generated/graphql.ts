@@ -30,6 +30,7 @@ export type Post = {
   id: Scalars['Int'];
   user?: Maybe<User>;
   userId?: Maybe<Scalars['Int']>;
+  body: Scalars['String'];
   like?: Maybe<Array<Maybe<Like>>>;
 };
 
@@ -190,6 +191,7 @@ export type PostResolvers<ContextType = Context, ParentType extends ResolversPar
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   user?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
   userId?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
+  body?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   like?: Resolver<Maybe<Array<Maybe<ResolversTypes['Like']>>>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
